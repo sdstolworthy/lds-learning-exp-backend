@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "spencer",
+    "password": "recneps",
+    "database": "lds_exp_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "spencer",
+    "password": "recneps",
+    "database": "lds_exp_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "spencer",
+    "password": "recneps",
+    "database": "lds_exp_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
