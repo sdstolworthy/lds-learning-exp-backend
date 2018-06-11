@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
 var scripturesRouter = require('./routes/scriptures');
+var eventRouter = require('./routes/event')
 
 var app = express();
 
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/event', eventRouter);
 app.use('/scriptures', scripturesRouter);
 
 // catch 404 and forward to error handler
@@ -35,7 +35,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.status(502).send(err)
+  res.status(500).send(err)
 });
 
 module.exports = app;
